@@ -4,6 +4,23 @@ body {
     padding: 20px;
 }
 
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.back-link:hover {
+    background: #eee;
+}
+
 .container {
     width: 100%;
     max-width: 800px;
