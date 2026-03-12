@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: #222;
+    padding-top: 40px;
+}
+
+div {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+}
+
+input {
+    font-size: 24px;
+    width: 80px;
+    padding: 5px;
+    text-align: center;
+}
+
+button {
+    font-size: 18px;
+    padding: 8px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#startBtn {
+    background: green;
+    color: white;
+}
+
+#resetBtn {
+    background: red;
+    color: white;
+}
+
+#display {
+    font-size: 60px;
+    font-family: monospace;
+    margin: 20px 0;
+}
