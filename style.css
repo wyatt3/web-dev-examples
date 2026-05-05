@@ -77,3 +77,8 @@ li a {
     color: #1e90ff;
     text-decoration: none;
 }
+
+.no-files {
+    color: #fff;
+    text-align: center;
+}
