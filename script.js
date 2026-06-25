@@ -1,0 +1,31 @@
+fetch("./dates.json").then((response) => response.json()).then((response) => {
+    const files = response.files;
+    const slides = response.slides;
+    const links = response.links;
+    
+    if (!checkDates(files, 'files')) {
+        document.getElementsByClassName('no-files')[0].style.display = 'none';
+    }
+    
+    if (!checkDates(slides, 'slides')) {
+        document.getElementsByClassName('no-slides')[0].style.display = 'none';
+    }
+    
+    if (!checkDates(links, 'links')) {
+        document.getElementsByClassName('no-links')[0].style.display = 'none';
+    }
+});
+
+function checkDates(dates, parentClassName) {
+    var hide = true;
+    const dateTime = new Date();
+    dates.forEach((obj) => {
+        if (dateTime > new Date(obj.release_date)) {
+            document.querySelectorAll("." + parentClassName + ' .' + obj.class_name).forEach(element => {
+                element.style.display = 'block';
+            })
+            hide = false;
+        }
+    });
+    return hide;
+}

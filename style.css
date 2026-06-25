@@ -9,68 +9,67 @@ body {
         -apple-system,
         sans-serif;
     background: #333;
-    padding: 40px;
+    padding: 20px 40px;
 }
+
 h1 {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #fff;
 }
-.projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-content: center;
-}
+
 .project-card {
-    flex: 1 1 300px;
+    margin: auto;
     max-width: 400px;
-    background: white;
+    background: #444;
     border-radius: 12px;
+    color: #fff;
     overflow: hidden;
     text-decoration: none;
-    color: inherit;
     display: block;
+    transition:
+        transform 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+    margin-bottom: 40px;
 }
+
 .project-card:hover {
-    transform: translateY(-1px);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .preview {
     width: 100%;
     height: 200px;
     display: block;
+    object-fit: cover;
 }
+
 .project-info {
     padding: 20px;
 }
+
 .project-title {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #333;
     margin-bottom: 8px;
 }
-.project-desc {
-    color: #666;
-    font-size: 0.9rem;
-}
 
-.final-project {
-    text-align: center;
-    margin-top: 50px;
-    color: #fff;
+.project-desc {
+    font-size: 0.9rem;
 }
 
 ul {
     list-style: none;
+    margin-bottom: 60px;
 }
 
 li {
+    display: none;
     margin-bottom: 10px;
     border-bottom: 1px solid #555;
     padding-bottom: 10px;
+    padding-left: 10px;
 }
 
 li a {
@@ -78,7 +77,21 @@ li a {
     text-decoration: none;
 }
 
-.no-files {
+li a:hover {
+    text-decoration: underline;
+}
+
+.list-section-header {
+    font-weight: 600;
+    color: #fff;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.no-files,
+.no-slides,
+.no-links {
+    display: block;
     color: #fff;
     text-align: center;
 }
