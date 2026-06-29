@@ -2,6 +2,7 @@ fetch("./dates.json").then((response) => response.json()).then((response) => {
     const files = response.files;
     const slides = response.slides;
     const links = response.links;
+    const feedbackContainer = response.feedback;
     
     if (!checkDates(files, 'files')) {
         document.getElementsByClassName('no-files')[0].style.display = 'none';
@@ -14,6 +15,8 @@ fetch("./dates.json").then((response) => response.json()).then((response) => {
     if (!checkDates(links, 'links')) {
         document.getElementsByClassName('no-links')[0].style.display = 'none';
     }
+    
+    checkDates(feedbackContainer, 'feedback-container');
 });
 
 function checkDates(dates, parentClassName) {
