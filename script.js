@@ -29,3 +29,24 @@ function checkDates(dates, parentClassName) {
     });
     return hide;
 }
+
+document.getElementById('feedback-form').addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = document.getElementById('email').value;
+    const feedback = document.getElementById('feedback').value;
+
+    if (email) {
+        return;
+    } else  {
+        // save the feedback to a json file on the server
+        fetch("./feedback.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: feedback
+        }).then(() => {
+            document.getElementById('feedback-form').reset();
+        });
+    }
+});
