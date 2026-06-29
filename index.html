@@ -51,14 +51,22 @@
         <li class="web-laws"><a target="_blank" href="https://html5up.net/">Free Website Templates</a></li>
         <li class="no-links">No Links Available Yet</li>
     </ul>
-
-    <h1>Class Feedback</h1>
-    <form id="feedback-form" action="./feedback.php" method="post">
-        <label for="feedback">Feedback:</label>
-        <input type="hidden" id="email" name="email">
-        <textarea id="feedback" name="feedback"></textarea>
-        <button type="submit">Submit Feedback</button>
-    </form>
+    <div class="feedback-container">
+        <div class="feedback">
+            <h1>Class Feedback</h1>
+            <form id="feedback-form" action="./feedback.php" method="post">
+                <label for="feedback">Feedback:</label>
+                <input type="hidden" id="email" name="email">
+                <textarea id="feedback" name="feedback" required placeholder="Enter your feedback here..."></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+        
+        <div id="feedback-submitted">
+            <h2>Thanks for your feedback!</h2>
+            <p>Submitted successfully</p>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

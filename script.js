@@ -46,7 +46,11 @@ document.getElementById('feedback-form').addEventListener('submit', (event) => {
             },
             body: feedback
         }).then(() => {
-            document.getElementById('feedback-form').reset();
+            document.getElementById('feedback-submitted').style.display = 'block';
+            setTimeout(() => {
+                document.getElementById('feedback-submitted').style.display = 'none';
+                document.getElementById('feedback-form').reset();
+            }, 3000);
         });
     }
 });
