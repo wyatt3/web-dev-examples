@@ -132,6 +132,10 @@ button:hover {
     background: #23a6e3;
 }
 
+.feedback {
+    display: none;
+}
+
 #feedback-submitted {
     display: none;
     text-align: center;
